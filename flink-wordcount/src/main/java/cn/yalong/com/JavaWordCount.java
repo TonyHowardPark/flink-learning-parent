@@ -24,7 +24,7 @@ public class JavaWordCount {
         @Override
         public void flatMap(String value, Collector<Tuple2<String, Integer>> out) {
             // normalize and split the line
-            String[] tokens = value.toLowerCase().split("\\W+");
+            String[] tokens = value.toLowerCase().split(" ");
 
             // emit the pairs
             for (String token : tokens) {
