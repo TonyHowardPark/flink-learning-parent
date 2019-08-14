@@ -9,7 +9,7 @@ import org.apache.flink.core.fs.FileSystem.WriteMode
  * @author yalong.zhou
  *
  */
-object WordCount {
+object WordCountFromFile {
 
   def main(args: Array[String]): Unit = {
 
