@@ -31,6 +31,7 @@ public class JavaWordCount {
      * comments :FlatMapFunction<String, Tuple2<String, Integer>> 中：
      *          第一个string类型为入参类型
      *          第二个参数Tuple2<String, Integer> 为出参类型
+     *
      * @author yalong.zhou
      */
     public static class Tokenizer implements FlatMapFunction<String, Tuple2<String, Integer>> {
