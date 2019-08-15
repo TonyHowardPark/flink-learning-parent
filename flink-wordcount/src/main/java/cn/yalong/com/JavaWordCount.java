@@ -6,6 +6,11 @@ import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.util.Collector;
 
+/**
+ * java版入门程序
+ *
+ * @author yalong.zhou
+ */
 public class JavaWordCount {
     public static void main(String[] args) throws Exception {
 
@@ -21,6 +26,13 @@ public class JavaWordCount {
         counts.print();
     }
 
+    /**
+     * 切分单词
+     * comments :FlatMapFunction<String, Tuple2<String, Integer>> 中：
+     *          第一个string类型为入参类型
+     *          第二个参数Tuple2<String, Integer> 为出参类型
+     * @author yalong.zhou
+     */
     public static class Tokenizer implements FlatMapFunction<String, Tuple2<String, Integer>> {
 
         @Override
